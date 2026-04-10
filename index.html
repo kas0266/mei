@@ -2,82 +2,71 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>古宅秘宝 - 多步骤解密游戏</title>
+    <title>西安外事学院 - 首页</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>🏺 古宅秘宝</h1>
-            <p>解开层层谜题，找到传说中的宝藏！</p >
-            <div class="progress">
-                <span id="level">当前关卡：1/4</span>
-            </div>
-        </header>
+<!-- 头部：校徽 + 校名 -->
+<div class="header">
+    <img src="https://www.xaiu.edu.cn/images/logo.png" alt="西安外事学院校徽" class="logo">
+    <h1>西安外事学院</h1>
+    <p>Xi'an International University</p>
+</div>
 
-        <div class="game-area" id="game">
-            <!-- 关卡1：书房线索 -->
-            <div class="level" id="level1">
-                <div class="clue-box">
-                    <h3>【关卡1】书房的日记</h3>
-                    <p>日记上写着：<br>
-                    "我把第一个密码藏在了月相里——<br>
-                    新月=0，上弦月=1，满月=2，下弦月=3<br>
-                    今晚的月相是：上弦月 → 满月 → 下弦月"</p >
-                </div>
-                <div class="input-area">
-                    <label for="pwd1">输入3位密码：</label>
-                    <input type="text" id="pwd1" placeholder="例：012">
-                    <button onclick="checkLevel1()">提交</button>
-                </div>
-                <div id="res1" class="result"></div>
-            </div>
+<!-- 导航栏（贴合官网栏目） -->
+<div class="nav">
+    <a href="index.html">首页</a>
+    <a href="#intro">学院简介</a>
+    <a href="#culture">鱼化龙文化</a>
+    <a href="#links">友情链接</a>
+    <a href="register.html">用户注册</a>
+</div>
 
-            <!-- 关卡2：藏宝图碎片 -->
-            <div class="level hidden" id="level2">
-                <div class="clue-box">
-                    <h3>【关卡2】藏宝图碎片</h3>
-                    <p>你发现了一张残缺的藏宝图：<br>
-                    碎片A：数字是 2 的倍数<br>
-                    碎片B：数字在 10~20 之间<br>
-                    碎片C：数字的各位之和为 7<br>
-                    提示：符合条件的最小数字</p >
-                </div>
-                <div class="input-area">
-                    <label for="pwd2">输入密码：</label>
-                    <input type="text" id="pwd2" placeholder="请输入数字">
-                    <button onclick="checkLevel2()">提交</button>
-                </div>
-                <div id="res2" class="result"></div>
-            </div>
+<!-- 轮播图（占位） -->
+<div class="banner">
+    <img src="https://picsum.photos/id/1036/1200/400" alt="外事校园风光">
+</div>
 
-            <!-- 关卡3：古老时钟 -->
-            <div class="level hidden" id="level3">
-                <div class="clue-box">
-                    <h3>【关卡3】古老时钟</h3>
-                    <p>墙上的时钟停在了 3 点 15 分，旁边刻着：<br>
-                    "时针与分针的夹角，就是打开下一扇门的钥匙"</p >
-                </div>
-                <div class="input-area">
-                    <label for="pwd3">输入角度：</label>
-                    <input type="text" id="pwd3" placeholder="例：30">
-                    <button onclick="checkLevel3()">提交</button>
-                </div>
-                <div id="res3" class="result"></div>
-            </div>
-
-            <!-- 关卡4：最终宝藏 -->
-            <div class="level hidden" id="level4">
-                <div class="clue-box success">
-                    <h3>🎉 恭喜你！</h3>
-                    <p>你成功破解了所有谜题，找到了古宅的宝藏！<br>
-                    感谢游玩本游戏 ✨</p >
-                </div>
-            </div>
-        </div>
+<!-- 主体内容 -->
+<div class="main">
+    <!-- 学院简介（真实内容） -->
+    <div class="intro" id="intro">
+        <h2>学院简介</h2>
+        <p>西安外事学院创建于1992年，是国家教育部批准的普通本科高校，位于西安高新技术产业开发区。学校秉持“明道、修身、利他、共荣”的校训，以“学无长幼、校无大小、教无高下、育无国界，人人都有理想的教育”为愿景。</p>
+        <p>学校以“鱼化龙”精神为核心文化，肩负“仰信笃志、化鱼成龙”的使命，践行“多元集纳、自强创新”的校风。是教育部首批“全国党建工作示范高校”“全国创新创业典型经验高校”、陕西“一流学院”建设单位。</p>
     </div>
 
-    <script src="script.js"></script>
+    <!-- 鱼化龙文化 -->
+    <div class="culture" id="culture">
+        <h3>鱼化龙文化</h3>
+        <p>学校地处鱼化寨，传为唐代学子祈福“鱼跃龙门”之地。校徽以“鱼化龙”为核心意象，象征学子化鱼成龙、成才报国的精神追求。</p>
+    </div>
+
+    <!-- 图片+超链接（校徽、校门） -->
+    <div class="img-links">
+        <h3>校园风采</h3>
+        <a href="https://www.xaiu.edu.cn" target="_blank">
+            <img src="https://www.xaiu.edu.cn/images/logo.png" alt="校徽" class="campus-img">
+        </a>
+        <a href="https://www.xaiu.edu.cn" target="_blank">
+            <img src="https://picsum.photos/id/1048/300/200" alt="外事校门" class="campus-img">
+        </a>
+    </div>
+
+    <!-- 友情链接 -->
+    <div class="friend-links" id="links">
+        <h3>友情链接</h3>
+        <a href="https://www.baidu.com" target="_blank">百度</a>
+        <a href="https://www.sina.com.cn" target="_blank">新浪</a>
+        <a href="https://www.163.com" target="_blank">网易</a>
+        <a href="https://www.xaiu.edu.cn" target="_blank">外事官网</a>
+    </div>
+</div>
+
+<!-- 底部 -->
+<div class="footer">
+    <p>地址：陕西省西安市雁塔区鱼斗路18号 | 邮编：710077 | 招生电话：029-88513888</p>
+    <p>© 2026 西安外事学院 版权所有</p>
+</div>
 </body>
 </html>

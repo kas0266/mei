@@ -2,119 +2,168 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Microsoft Yahei", sans-serif;
+    font-family: "微软雅黑", sans-serif;
 }
 
 body {
-    background-color: #2c1e1e;
-    color: #f0e6d2;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%232c1e1e"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%234a352a" stroke-width="0.5"/></svg>');
+    background-color: #f7f9fc;
+    color: #333;
 }
 
-.container {
-    width: 90%;
-    max-width: 800px;
-    background-color: #3d2b2b;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-    border: 2px solid #8b5a2b;
-}
-
-header {
+/* 头部 */
+.header {
+    background-color: #003366; /* 外事深蓝色 */
+    color: #fff;
     text-align: center;
-    margin-bottom: 2rem;
+    padding: 20px 0;
+}
+.logo {
+    width: 70px;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+.header h1 {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 28px;
+}
+.header p {
+    font-size: 14px;
+    opacity: 0.9;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    color: #d4af37;
-    margin-bottom: 0.5rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+/* 导航 */
+.nav {
+    background-color: #0055aa;
+    text-align: center;
+}
+.nav a {
+    color: #fff;
+    display: inline-block;
+    padding: 14px 22px;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav a:hover {
+    background-color: #0066cc;
 }
 
-.progress {
-    margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #d4af37;
+/* 轮播 */
+.banner img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.clue-box {
-    background-color: #4a352a;
-    padding: 1.5rem;
+/* 主体 */
+.main {
+    width: 85%;
+    margin: 30px auto;
+    background: #fff;
+    padding: 30px;
     border-radius: 8px;
-    margin-bottom: 1.5rem;
-    border-left: 5px solid #8b5a2b;
-    line-height: 1.6;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+.main h2, .main h3 {
+    color: #003366;
+    margin-bottom: 15px;
+    border-left: 4px solid #0055aa;
+    padding-left: 10px;
+}
+.main p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+    text-indent: 2em;
 }
 
-.clue-box h3 {
-    color: #d4af37;
-    margin-bottom: 0.8rem;
-    font-size: 1.2rem;
+/* 图片链接 */
+.img-links {
+    text-align: center;
+    margin: 30px 0;
+}
+.campus-img {
+    width: 280px;
+    height: 180px;
+    margin: 10px 15px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    transition: 0.3s;
+}
+.campus-img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.input-area {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin: 1.5rem 0;
-    flex-wrap: wrap;
+/* 友情链接 */
+.friend-links {
+    text-align: center;
+    margin: 25px 0;
+}
+.friend-links a {
+    margin: 0 12px;
+    color: #0055aa;
+    text-decoration: none;
+}
+.friend-links a:hover {
+    color: #003366;
+    text-decoration: underline;
 }
 
-.input-area label {
-    font-size: 1rem;
+/* 注册页 */
+.register-container {
+    width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
 }
-
-.input-area input {
-    padding: 0.8rem;
-    border: 1px solid #8b5a2b;
+.form-item {
+    margin-bottom: 20px;
+}
+.form-item label {
+    display: block;
+    margin-bottom: 6px;
+    color: #003366;
+    font-weight: 500;
+}
+.form-item input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
     border-radius: 4px;
-    font-size: 1rem;
-    background-color: #2c1e1e;
-    color: #f0e6d2;
-    flex: 1;
-    min-width: 120px;
+    font-size: 15px;
 }
-
-.input-area button {
-    padding: 0.8rem 1.5rem;
-    background-color: #8b5a2b;
-    color: #f0e6d2;
+.form-btn {
+    text-align: center;
+    margin-top: 30px;
+}
+.submit-btn {
+    background-color: #0055aa;
+    color: #fff;
     border: none;
+    padding: 12px 30px;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s;
+    margin-right: 15px;
+}
+.submit-btn:hover {
+    background-color: #003366;
+}
+.back-btn {
+    color: #666;
+    text-decoration: none;
+}
+.back-btn:hover {
+    text-decoration: underline;
 }
 
-.input-area button:hover {
-    background-color: #d4af37;
-    color: #2c1e1e;
-}
-
-.result {
-    padding: 1rem;
-    border-radius: 8px;
+/* 底部 */
+.footer {
+    background-color: #003366;
+    color: #fff;
     text-align: center;
-    font-size: 1.1rem;
-    margin-top: 1rem;
-}
-
-.success {
-    background-color: #2ecc71;
-    color: white;
-}
-
-.fail {
-    background-color: #e74c3c;
-    color: white;
-}
-
-.hidden {
-    display: none;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 14px;
 }
