@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>古宅秘宝 - 多步骤解密游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🏺 古宅秘宝</h1>
+            <p>解开层层谜题，找到传说中的宝藏！</p >
+            <div class="progress">
+                <span id="level">当前关卡：1/4</span>
+            </div>
+        </header>
+
+        <div class="game-area" id="game">
+            <!-- 关卡1：书房线索 -->
+            <div class="level" id="level1">
+                <div class="clue-box">
+                    <h3>【关卡1】书房的日记</h3>
+                    <p>日记上写着：<br>
+                    "我把第一个密码藏在了月相里——<br>
+                    新月=0，上弦月=1，满月=2，下弦月=3<br>
+                    今晚的月相是：上弦月 → 满月 → 下弦月"</p >
+                </div>
+                <div class="input-area">
+                    <label for="pwd1">输入3位密码：</label>
+                    <input type="text" id="pwd1" placeholder="例：012">
+                    <button onclick="checkLevel1()">提交</button>
+                </div>
+                <div id="res1" class="result"></div>
+            </div>
+
+            <!-- 关卡2：藏宝图碎片 -->
+            <div class="level hidden" id="level2">
+                <div class="clue-box">
+                    <h3>【关卡2】藏宝图碎片</h3>
+                    <p>你发现了一张残缺的藏宝图：<br>
+                    碎片A：数字是 2 的倍数<br>
+                    碎片B：数字在 10~20 之间<br>
+                    碎片C：数字的各位之和为 7<br>
+                    提示：符合条件的最小数字</p >
+                </div>
+                <div class="input-area">
+                    <label for="pwd2">输入密码：</label>
+                    <input type="text" id="pwd2" placeholder="请输入数字">
+                    <button onclick="checkLevel2()">提交</button>
+                </div>
+                <div id="res2" class="result"></div>
+            </div>
+
+            <!-- 关卡3：古老时钟 -->
+            <div class="level hidden" id="level3">
+                <div class="clue-box">
+                    <h3>【关卡3】古老时钟</h3>
+                    <p>墙上的时钟停在了 3 点 15 分，旁边刻着：<br>
+                    "时针与分针的夹角，就是打开下一扇门的钥匙"</p >
+                </div>
+                <div class="input-area">
+                    <label for="pwd3">输入角度：</label>
+                    <input type="text" id="pwd3" placeholder="例：30">
+                    <button onclick="checkLevel3()">提交</button>
+                </div>
+                <div id="res3" class="result"></div>
+            </div>
+
+            <!-- 关卡4：最终宝藏 -->
+            <div class="level hidden" id="level4">
+                <div class="clue-box success">
+                    <h3>🎉 恭喜你！</h3>
+                    <p>你成功破解了所有谜题，找到了古宅的宝藏！<br>
+                    感谢游玩本游戏 ✨</p >
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
